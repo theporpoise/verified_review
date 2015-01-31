@@ -1,0 +1,421 @@
+##===============================================================================================
+##.Task 1 buyer.createWallet => completed (creating new wallets)  ===============================
+##===============================================================================================
+=> input =>
+null
+=> output =>
+{
+    "addresses": [
+        "n4jSBazscrgFX5AdtHUaoj2hPyZ3zv9UuU"
+    ],
+    "privateKey": "KyMdJvUtk1Dn73hayKBE5tL9L2z7gTgEN3tKLBT3KKoApgEbGgnW",
+    "linkToCheck": "http://explorer.chain.com/addresses/n4jSBazscrgFX5AdtHUaoj2hPyZ3zv9UuU"
+}
+=> session storage =>
+{
+    "buyer": {
+        "wallet": {
+            "addresses": [
+                "n4jSBazscrgFX5AdtHUaoj2hPyZ3zv9UuU"
+            ],
+            "privateKey": "KyMdJvUtk1Dn73hayKBE5tL9L2z7gTgEN3tKLBT3KKoApgEbGgnW",
+            "linkToCheck": "http://explorer.chain.com/addresses/n4jSBazscrgFX5AdtHUaoj2hPyZ3zv9UuU"
+        },
+        "faucetWithdrawal": {
+            "transactionId": null,
+            "linkToCheck": null
+        },
+        "purchase": {
+            "transactionId": null
+        },
+        "review": {
+            "message": null,
+            "signatureDER": null
+        }
+    },
+    "seller": {
+        "wallet": null,
+        "incomeTransactions": [],
+        "reviewDataTransactions": []
+    }
+}
+##================================================================================================
+##.Task 2 seller.createWallet => completed (creating new wallets)  ===============================
+##================================================================================================
+=> input =>
+null
+=> output =>
+{
+    "addresses": [
+        "mrVZ1nDtvDyXTN9hDWiQnJMcY6gVEaXksv"
+    ],
+    "privateKey": "L1W1Vctu1HktSrEbTmFCkhdVwh7aetWTtyYRaGvioZQnEqZUC6sF",
+    "linkToCheck": "http://explorer.chain.com/addresses/mrVZ1nDtvDyXTN9hDWiQnJMcY6gVEaXksv"
+}
+=> session storage =>
+{
+    "buyer": {
+        "wallet": {
+            "addresses": [
+                "n4jSBazscrgFX5AdtHUaoj2hPyZ3zv9UuU"
+            ],
+            "privateKey": "KyMdJvUtk1Dn73hayKBE5tL9L2z7gTgEN3tKLBT3KKoApgEbGgnW",
+            "linkToCheck": "http://explorer.chain.com/addresses/n4jSBazscrgFX5AdtHUaoj2hPyZ3zv9UuU"
+        },
+        "faucetWithdrawal": {
+            "transactionId": null,
+            "linkToCheck": null
+        },
+        "purchase": {
+            "transactionId": null
+        },
+        "review": {
+            "message": null,
+            "signatureDER": null
+        }
+    },
+    "seller": {
+        "wallet": {
+            "addresses": [
+                "mrVZ1nDtvDyXTN9hDWiQnJMcY6gVEaXksv"
+            ],
+            "privateKey": "L1W1Vctu1HktSrEbTmFCkhdVwh7aetWTtyYRaGvioZQnEqZUC6sF",
+            "linkToCheck": "http://explorer.chain.com/addresses/mrVZ1nDtvDyXTN9hDWiQnJMcY6gVEaXksv"
+        },
+        "incomeTransactions": [],
+        "reviewDataTransactions": []
+    }
+}
+##================================================================================================
+##.Task 3 buyer.withdrawTestBitCoinsFromFaucet (withdraw money from faucet) ======================
+##================================================================================================
+=> input =>
+{
+    "address": "n4jSBazscrgFX5AdtHUaoj2hPyZ3zv9UuU",
+    "valueToWithDraw": 140000
+}
+=> output =>
+{
+    "transactionId": "8c0de22c1260c1c13101bf5a097c78272178d84bd922fef5ef41263d31ef6354"
+}
+=> session storage =>
+{
+    "buyer": {
+        "wallet": {
+            "addresses": [
+                "n4jSBazscrgFX5AdtHUaoj2hPyZ3zv9UuU"
+            ],
+            "privateKey": "KyMdJvUtk1Dn73hayKBE5tL9L2z7gTgEN3tKLBT3KKoApgEbGgnW",
+            "linkToCheck": "http://explorer.chain.com/addresses/n4jSBazscrgFX5AdtHUaoj2hPyZ3zv9UuU"
+        },
+        "faucetWithdrawal": {
+            "volume": 140000,
+            "transactionId": "8c0de22c1260c1c13101bf5a097c78272178d84bd922fef5ef41263d31ef6354",
+            "linkToCheck": "http://explorer.chain.com/transactions/8c0de22c1260c1c13101bf5a097c78272178d84bd922fef5ef41263d31ef6354"
+        },
+        "purchase": {
+            "transactionId": null
+        },
+        "review": {
+            "message": null,
+            "signatureDER": null
+        }
+    },
+    "seller": {
+        "wallet": {
+            "addresses": [
+                "mrVZ1nDtvDyXTN9hDWiQnJMcY6gVEaXksv"
+            ],
+            "privateKey": "L1W1Vctu1HktSrEbTmFCkhdVwh7aetWTtyYRaGvioZQnEqZUC6sF",
+            "linkToCheck": "http://explorer.chain.com/addresses/mrVZ1nDtvDyXTN9hDWiQnJMcY6gVEaXksv"
+        },
+        "incomeTransactions": [],
+        "reviewDataTransactions": []
+    }
+}
+##================================================================================================
+##.Task 4 buyer.buyer_makePurchaseTransaction  ======================
+##================================================================================================
+=> input =>
+{
+    "buyerPrivateKey": "KyMdJvUtk1Dn73hayKBE5tL9L2z7gTgEN3tKLBT3KKoApgEbGgnW",
+    "buyerAddressOfUnspents": "n4jSBazscrgFX5AdtHUaoj2hPyZ3zv9UuU",
+    "sellerAddress": "mrVZ1nDtvDyXTN9hDWiQnJMcY6gVEaXksv",
+    "costOfPurchase": 14000,
+    "transactionFee": 10000
+}
+=> output =>
+{
+    "transactionId": "61f15e10a1ddf9e3ca716fc3e936a2441fab72eae00d8c3f77d5fc29955e69fa"
+}
+=> session storage =>
+{
+    "buyer": {
+        "wallet": {
+            "addresses": [
+                "n4jSBazscrgFX5AdtHUaoj2hPyZ3zv9UuU"
+            ],
+            "privateKey": "KyMdJvUtk1Dn73hayKBE5tL9L2z7gTgEN3tKLBT3KKoApgEbGgnW",
+            "linkToCheck": "http://explorer.chain.com/addresses/n4jSBazscrgFX5AdtHUaoj2hPyZ3zv9UuU"
+        },
+        "faucetWithdrawal": {
+            "volume": 140000,
+            "transactionId": "8c0de22c1260c1c13101bf5a097c78272178d84bd922fef5ef41263d31ef6354",
+            "linkToCheck": "http://explorer.chain.com/transactions/8c0de22c1260c1c13101bf5a097c78272178d84bd922fef5ef41263d31ef6354"
+        },
+        "purchase": {
+            "transactionId": "61f15e10a1ddf9e3ca716fc3e936a2441fab72eae00d8c3f77d5fc29955e69fa"
+        },
+        "review": {
+            "message": null,
+            "signatureDER": null
+        }
+    },
+    "seller": {
+        "wallet": {
+            "addresses": [
+                "mrVZ1nDtvDyXTN9hDWiQnJMcY6gVEaXksv"
+            ],
+            "privateKey": "L1W1Vctu1HktSrEbTmFCkhdVwh7aetWTtyYRaGvioZQnEqZUC6sF",
+            "linkToCheck": "http://explorer.chain.com/addresses/mrVZ1nDtvDyXTN9hDWiQnJMcY6gVEaXksv"
+        },
+        "incomeTransactions": [],
+        "reviewDataTransactions": []
+    }
+}
+##================================================================================================
+##.Task 5 buyer.seller_recognizeIncomeTransaction  ======================
+##================================================================================================
+=> input =>
+{
+    "transactionId": "61f15e10a1ddf9e3ca716fc3e936a2441fab72eae00d8c3f77d5fc29955e69fa"
+}
+=> output =>
+{
+    "transactionId": "61f15e10a1ddf9e3ca716fc3e936a2441fab72eae00d8c3f77d5fc29955e69fa",
+    "buyerPublicKey": "0319e70c85f1dcd54c540522e231917c60faf4a5849dc4ae58f1f218f89ffac7e8"
+}
+=> session storage =>
+{
+    "buyer": {
+        "wallet": {
+            "addresses": [
+                "n4jSBazscrgFX5AdtHUaoj2hPyZ3zv9UuU"
+            ],
+            "privateKey": "KyMdJvUtk1Dn73hayKBE5tL9L2z7gTgEN3tKLBT3KKoApgEbGgnW",
+            "linkToCheck": "http://explorer.chain.com/addresses/n4jSBazscrgFX5AdtHUaoj2hPyZ3zv9UuU"
+        },
+        "faucetWithdrawal": {
+            "volume": 140000,
+            "transactionId": "8c0de22c1260c1c13101bf5a097c78272178d84bd922fef5ef41263d31ef6354",
+            "linkToCheck": "http://explorer.chain.com/transactions/8c0de22c1260c1c13101bf5a097c78272178d84bd922fef5ef41263d31ef6354"
+        },
+        "purchase": {
+            "transactionId": "61f15e10a1ddf9e3ca716fc3e936a2441fab72eae00d8c3f77d5fc29955e69fa"
+        },
+        "review": {
+            "message": null,
+            "signatureDER": null
+        }
+    },
+    "seller": {
+        "wallet": {
+            "addresses": [
+                "mrVZ1nDtvDyXTN9hDWiQnJMcY6gVEaXksv"
+            ],
+            "privateKey": "L1W1Vctu1HktSrEbTmFCkhdVwh7aetWTtyYRaGvioZQnEqZUC6sF",
+            "linkToCheck": "http://explorer.chain.com/addresses/mrVZ1nDtvDyXTN9hDWiQnJMcY6gVEaXksv"
+        },
+        "incomeTransactions": [
+            {
+                "transactionId": "61f15e10a1ddf9e3ca716fc3e936a2441fab72eae00d8c3f77d5fc29955e69fa",
+                "buyerPublicKey": "0319e70c85f1dcd54c540522e231917c60faf4a5849dc4ae58f1f218f89ffac7e8"
+            }
+        ],
+        "reviewDataTransactions": []
+    }
+}
+##================================================================================================
+##.Task 6 buyer.buyer_signMessage  ======================
+##================================================================================================
+=> input =>
+{
+    "message": "I have been here a few times and is the best second pizza I 've eaten , of course mine been the best !  I gave this a five because of the food ! But staff an specially cashiers need to be more friendly ! Lady a the cash register was texting while she was taking our order . Not good !!! And she was not very nice .  But margarita was awesome!",
+    "privateKey": "KyMdJvUtk1Dn73hayKBE5tL9L2z7gTgEN3tKLBT3KKoApgEbGgnW"
+}
+=> output =>
+{
+    "signatureDER": "304402205b2cf335508ad623a9cd80c66135ae71505fb0d95487830012fe8b4972e2c9a802203369f46bdb614ac62c1afca6d5fe4a14ec85ef569c9d2a805d187358e2b4ab7b"
+}
+=> session storage =>
+{
+    "buyer": {
+        "wallet": {
+            "addresses": [
+                "n4jSBazscrgFX5AdtHUaoj2hPyZ3zv9UuU"
+            ],
+            "privateKey": "KyMdJvUtk1Dn73hayKBE5tL9L2z7gTgEN3tKLBT3KKoApgEbGgnW",
+            "linkToCheck": "http://explorer.chain.com/addresses/n4jSBazscrgFX5AdtHUaoj2hPyZ3zv9UuU"
+        },
+        "faucetWithdrawal": {
+            "volume": 140000,
+            "transactionId": "8c0de22c1260c1c13101bf5a097c78272178d84bd922fef5ef41263d31ef6354",
+            "linkToCheck": "http://explorer.chain.com/transactions/8c0de22c1260c1c13101bf5a097c78272178d84bd922fef5ef41263d31ef6354"
+        },
+        "purchase": {
+            "transactionId": "61f15e10a1ddf9e3ca716fc3e936a2441fab72eae00d8c3f77d5fc29955e69fa"
+        },
+        "review": {
+            "message": "I have been here a few times and is the best second pizza I 've eaten , of course mine been the best !  I gave this a five because of the food ! But staff an specially cashiers need to be more friendly ! Lady a the cash register was texting while she was taking our order . Not good !!! And she was not very nice .  But margarita was awesome!",
+            "signatureDER": "304402205b2cf335508ad623a9cd80c66135ae71505fb0d95487830012fe8b4972e2c9a802203369f46bdb614ac62c1afca6d5fe4a14ec85ef569c9d2a805d187358e2b4ab7b"
+        }
+    },
+    "seller": {
+        "wallet": {
+            "addresses": [
+                "mrVZ1nDtvDyXTN9hDWiQnJMcY6gVEaXksv"
+            ],
+            "privateKey": "L1W1Vctu1HktSrEbTmFCkhdVwh7aetWTtyYRaGvioZQnEqZUC6sF",
+            "linkToCheck": "http://explorer.chain.com/addresses/mrVZ1nDtvDyXTN9hDWiQnJMcY6gVEaXksv"
+        },
+        "incomeTransactions": [
+            {
+                "transactionId": "61f15e10a1ddf9e3ca716fc3e936a2441fab72eae00d8c3f77d5fc29955e69fa",
+                "buyerPublicKey": "0319e70c85f1dcd54c540522e231917c60faf4a5849dc4ae58f1f218f89ffac7e8"
+            }
+        ],
+        "reviewDataTransactions": []
+    }
+}
+##================================================================================================
+##.Task 7 seller.verificationResult  ======================
+##================================================================================================
+=> input =>
+{
+    "message": "I have been here a few times and is the best second pizza I 've eaten , of course mine been the best !  I gave this a five because of the food ! But staff an specially cashiers need to be more friendly ! Lady a the cash register was texting while she was taking our order . Not good !!! And she was not very nice .  But margarita was awesome!",
+    "signatureDER": "304402205b2cf335508ad623a9cd80c66135ae71505fb0d95487830012fe8b4972e2c9a802203369f46bdb614ac62c1afca6d5fe4a14ec85ef569c9d2a805d187358e2b4ab7b",
+    "incomeTransactions": [
+        {
+            "transactionId": "61f15e10a1ddf9e3ca716fc3e936a2441fab72eae00d8c3f77d5fc29955e69fa",
+            "buyerPublicKey": "0319e70c85f1dcd54c540522e231917c60faf4a5849dc4ae58f1f218f89ffac7e8"
+        }
+    ]
+}
+=> output =>
+{
+    "verificationResult": true,
+    "buyerTransaction": {
+        "transactionId": "61f15e10a1ddf9e3ca716fc3e936a2441fab72eae00d8c3f77d5fc29955e69fa",
+        "buyerPublicKey": "0319e70c85f1dcd54c540522e231917c60faf4a5849dc4ae58f1f218f89ffac7e8"
+    }
+}
+=> session storage =>
+{
+    "buyer": {
+        "wallet": {
+            "addresses": [
+                "n4jSBazscrgFX5AdtHUaoj2hPyZ3zv9UuU"
+            ],
+            "privateKey": "KyMdJvUtk1Dn73hayKBE5tL9L2z7gTgEN3tKLBT3KKoApgEbGgnW",
+            "linkToCheck": "http://explorer.chain.com/addresses/n4jSBazscrgFX5AdtHUaoj2hPyZ3zv9UuU"
+        },
+        "faucetWithdrawal": {
+            "volume": 140000,
+            "transactionId": "8c0de22c1260c1c13101bf5a097c78272178d84bd922fef5ef41263d31ef6354",
+            "linkToCheck": "http://explorer.chain.com/transactions/8c0de22c1260c1c13101bf5a097c78272178d84bd922fef5ef41263d31ef6354"
+        },
+        "purchase": {
+            "transactionId": "61f15e10a1ddf9e3ca716fc3e936a2441fab72eae00d8c3f77d5fc29955e69fa"
+        },
+        "review": {
+            "message": "I have been here a few times and is the best second pizza I 've eaten , of course mine been the best !  I gave this a five because of the food ! But staff an specially cashiers need to be more friendly ! Lady a the cash register was texting while she was taking our order . Not good !!! And she was not very nice .  But margarita was awesome!",
+            "signatureDER": "304402205b2cf335508ad623a9cd80c66135ae71505fb0d95487830012fe8b4972e2c9a802203369f46bdb614ac62c1afca6d5fe4a14ec85ef569c9d2a805d187358e2b4ab7b"
+        }
+    },
+    "seller": {
+        "wallet": {
+            "addresses": [
+                "mrVZ1nDtvDyXTN9hDWiQnJMcY6gVEaXksv"
+            ],
+            "privateKey": "L1W1Vctu1HktSrEbTmFCkhdVwh7aetWTtyYRaGvioZQnEqZUC6sF",
+            "linkToCheck": "http://explorer.chain.com/addresses/mrVZ1nDtvDyXTN9hDWiQnJMcY6gVEaXksv"
+        },
+        "incomeTransactions": [
+            {
+                "transactionId": "61f15e10a1ddf9e3ca716fc3e936a2441fab72eae00d8c3f77d5fc29955e69fa",
+                "buyerPublicKey": "0319e70c85f1dcd54c540522e231917c60faf4a5849dc4ae58f1f218f89ffac7e8",
+                "signagureDER": "304402205b2cf335508ad623a9cd80c66135ae71505fb0d95487830012fe8b4972e2c9a802203369f46bdb614ac62c1afca6d5fe4a14ec85ef569c9d2a805d187358e2b4ab7b",
+                "message": "I have been here a few times and is the best second pizza I 've eaten , of course mine been the best !  I gave this a five because of the food ! But staff an specially cashiers need to be more friendly ! Lady a the cash register was texting while she was taking our order . Not good !!! And she was not very nice .  But margarita was awesome!"
+            }
+        ],
+        "reviewDataTransactions": []
+    }
+}
+[ { txId: '61f15e10a1ddf9e3ca716fc3e936a2441fab72eae00d8c3f77d5fc29955e69fa',
+    address: 'mrVZ1nDtvDyXTN9hDWiQnJMcY6gVEaXksv',
+    confirmations: 0,
+    value: 14000,
+    vout: 0 } ]
+##================================================================================================
+##.Task 8 seller.dataStoredInBlockChain  ======================
+##================================================================================================
+=> input =>
+{
+    "message": "I have been here a few times and is the best second pizza I 've eaten , of course mine been the best !  I gave this a five because of the food ! But staff an specially cashiers need to be more friendly ! Lady a the cash register was texting while she was taking our order . Not good !!! And she was not very nice .  But margarita was awesome!",
+    "privateKey": "L1W1Vctu1HktSrEbTmFCkhdVwh7aetWTtyYRaGvioZQnEqZUC6sF",
+    "addressOfUnspents": "mrVZ1nDtvDyXTN9hDWiQnJMcY6gVEaXksv"
+}
+=> output =>
+{
+    "dataStoredInBlockChain": "492c7dc1",
+    "transactionId": "63dfa203240c3f59e6827947af2d46388f4b02f9ad8b11bd0e46384317e6ac03"
+}
+=> session storage =>
+{
+    "buyer": {
+        "wallet": {
+            "addresses": [
+                "n4jSBazscrgFX5AdtHUaoj2hPyZ3zv9UuU"
+            ],
+            "privateKey": "KyMdJvUtk1Dn73hayKBE5tL9L2z7gTgEN3tKLBT3KKoApgEbGgnW",
+            "linkToCheck": "http://explorer.chain.com/addresses/n4jSBazscrgFX5AdtHUaoj2hPyZ3zv9UuU"
+        },
+        "faucetWithdrawal": {
+            "volume": 140000,
+            "transactionId": "8c0de22c1260c1c13101bf5a097c78272178d84bd922fef5ef41263d31ef6354",
+            "linkToCheck": "http://explorer.chain.com/transactions/8c0de22c1260c1c13101bf5a097c78272178d84bd922fef5ef41263d31ef6354"
+        },
+        "purchase": {
+            "transactionId": "61f15e10a1ddf9e3ca716fc3e936a2441fab72eae00d8c3f77d5fc29955e69fa"
+        },
+        "review": {
+            "message": "I have been here a few times and is the best second pizza I 've eaten , of course mine been the best !  I gave this a five because of the food ! But staff an specially cashiers need to be more friendly ! Lady a the cash register was texting while she was taking our order . Not good !!! And she was not very nice .  But margarita was awesome!",
+            "signatureDER": "304402205b2cf335508ad623a9cd80c66135ae71505fb0d95487830012fe8b4972e2c9a802203369f46bdb614ac62c1afca6d5fe4a14ec85ef569c9d2a805d187358e2b4ab7b"
+        }
+    },
+    "seller": {
+        "wallet": {
+            "addresses": [
+                "mrVZ1nDtvDyXTN9hDWiQnJMcY6gVEaXksv"
+            ],
+            "privateKey": "L1W1Vctu1HktSrEbTmFCkhdVwh7aetWTtyYRaGvioZQnEqZUC6sF",
+            "linkToCheck": "http://explorer.chain.com/addresses/mrVZ1nDtvDyXTN9hDWiQnJMcY6gVEaXksv"
+        },
+        "incomeTransactions": [
+            {
+                "transactionId": "61f15e10a1ddf9e3ca716fc3e936a2441fab72eae00d8c3f77d5fc29955e69fa",
+                "buyerPublicKey": "0319e70c85f1dcd54c540522e231917c60faf4a5849dc4ae58f1f218f89ffac7e8",
+                "signagureDER": "304402205b2cf335508ad623a9cd80c66135ae71505fb0d95487830012fe8b4972e2c9a802203369f46bdb614ac62c1afca6d5fe4a14ec85ef569c9d2a805d187358e2b4ab7b",
+                "message": "I have been here a few times and is the best second pizza I 've eaten , of course mine been the best !  I gave this a five because of the food ! But staff an specially cashiers need to be more friendly ! Lady a the cash register was texting while she was taking our order . Not good !!! And she was not very nice .  But margarita was awesome!"
+            }
+        ],
+        "reviewDataTransactions": [
+            {
+                "dataStoredInBlockChain": "492c7dc1",
+                "transactionId": "63dfa203240c3f59e6827947af2d46388f4b02f9ad8b11bd0e46384317e6ac03",
+                "linkToCheck": "http://explorer.chain.com/transactions/63dfa203240c3f59e6827947af2d46388f4b02f9ad8b11bd0e46384317e6ac03"
+            }
+        ]
+    }
+}
+==================  Ho ho everything is completed   ==============

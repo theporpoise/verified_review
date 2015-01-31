@@ -1,0 +1,62 @@
+extend layout
+
+
+block content
+  p
+    div
+
+      br
+      br
+      form(name="matt_make_wallet", action="/matt_make_wallet", method="post")
+        | Make buyer and seller wallets
+        br 
+        input(type="submit", value="Make Buyer and Seller Wallets" name="transaction_hash") 
+        br
+      p
+      form(name="make_purchase", action="/make_purchase", method="post")
+        | Buyer makes purchase
+        br 
+        input(type="submit", value="Make Purchase" name="transaction_hash") 
+        br
+      p
+      form(name="leave_review", action="/leave_review", method="post")
+        | Buyer leaves review
+        br 
+        input(type="submit", value="Leave Review" name="transaction_hash") 
+        br
+      p
+      form(name="store_review_hash", action="/store_review_hash", method="post")
+        | Save hash of verified review
+        br 
+        input(type="submit", value="Save Hash" name="transaction_hash") 
+        br
+      p
+        br
+
+        | Run all calls the six transactions in order
+        | create a buyer wallet, create a seller wallet, send a transaction, amount to send buy now, 
+        | pass it into a function that creates the transaction
+        | create wallet is a function that returns 2 wallets
+        | fund the buyers wallet by calling the buyer wallet and see how muhc money to spend.
+        | Next we make the transaction, you have to calculate the outputs to make sure it has the right amounts + fee
+        | This is called a transaction builder.  You get this from the buyer wallet you made earlier
+        | Sanity check, the buyer checks the signature, what he does is what the seller does on his side
+        | Now the buyer wants to sign the message
+        | Message is an input on this, takes in review text, takes a hash with the review and the private key
+        | Private key has a function sign.  We sign the hash of the review and store in a compact DER format
+        | Now, how to verify the review!
+        | When you go to verify inputs, signature, message, transaction hash.
+        | What we provide to seller is signature (message + private key signed), and message, transaction hash
+        | The use the message, they use the transaction hash to find the public key, and they use the signature (hex value) to 
+        | verify it.  This comes from bitcoin-js.
+        | runall.js, runs all six scripts.
+        | 1) Create the wallets, 2) fund buyers wallet, 3) make the transaction, 4) Sign the transaction, 5) Verify transaction
+
+
+
+    br
+
+
+
+
+
